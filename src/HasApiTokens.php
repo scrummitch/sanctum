@@ -21,7 +21,7 @@ trait HasApiTokens
      */
     public function tokens()
     {
-        return $this->morphMany(Sanctum::$personalAccessTokenModel, 'tokenable');
+        return $this->morphMany(Sanctum::$personalAccessTokenModel, 'tokenable')->chaperone();
     }
 
     /**
